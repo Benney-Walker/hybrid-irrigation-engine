@@ -1,7 +1,7 @@
 import numpy as np
 from skfuzzy import control as ctrl
-from Decision.membership import define_memberships
-from Decision.rules import get_rules
+from decision.membership import define_memberships
+from decision.rules import get_rules
 
 def run_fuzzy(env):
 
