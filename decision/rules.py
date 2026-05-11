@@ -1,12 +1,20 @@
 from skfuzzy import control as ctrl
 
-def get_rules(soil, temp, humidity, light, rain, irrigation):
+def get_rules(current_moisture, predicted_moisture, temp, humidity, light, rain, irrigation):
 
     return [
-        ctrl.Rule(soil['low'] & rain['low'], irrigation['high']),
-        ctrl.Rule(rain['high'], irrigation['low']),
-        ctrl.Rule(soil['very_low'] & temp['high'], irrigation['high']),
-        ctrl.Rule(soil['medium'] & humidity['medium'], irrigation['medium']),
-        ctrl.Rule(temp['low'] & soil['high'], irrigation['low']),
-        ctrl.Rule(light['high'] & soil['low'], irrigation['high']),
+        # Extremely dry soil → always irrigate
+        ctrl.Rule(current_moisture['very_low'], irrigation['high']),
+
+        # Dry soil + high sunlight → strong irrigation
+        ctrl.Rule(current_moisture['low'] & light['high'], irrigation['high']),
+
+        # Medium soil + high sunlight → moderate irrigation
+        ctrl.Rule(current_moisture['medium'] & light['high'], irrigation['medium']),
+
+        # Medium soil + low sunlight → low irrigation
+        ctrl.Rule(current_moisture['medium'] & light['low'], irrigation['low']),
+
+        # High soil → no irrigation
+        ctrl.Rule(current_moisture['high'], irrigation['low'])
     ]
