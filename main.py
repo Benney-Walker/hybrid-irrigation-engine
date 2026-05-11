@@ -7,15 +7,16 @@ def run_engine(data):
     validated = validate_input(data)
     predicted = predict_environment(validated)
     result = run_fuzzy(predicted)
-    return format_output(result)
+    return format_output(result, data)
 
 if __name__ == "__main__":
     sample = {
-        "soilMoisture": 25,
-        "temperature": 34,
-        "humidity": 45,
-        "lightIntensity": 700,
-        "rainProbability": 10
+        "preparedDataId":123456,
+        "soilMoisture": 49,
+        "temperature": 37,
+        "humidity": 37,
+        "lightIntensity": 200,
+        "rainProbability": 100
     }
 
     print(run_engine(sample))
