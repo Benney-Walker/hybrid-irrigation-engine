@@ -6,7 +6,11 @@ from sklearn.preprocessing import MinMaxScaler
 # LOAD MODEL
 # -----------------------------
 
-model = load_model('../models/moisture_predictor_lstm_v1.keras')
+model = load_model('models/moisture_predictor_lstm_v2.keras')
+
+# -----------------------------
+# SCALER
+# -----------------------------
 
 scaler = MinMaxScaler()
 
@@ -20,40 +24,56 @@ scaler.fit([
 # PREDICTION FUNCTION
 # -----------------------------
 
-sequence_buffer = []
+def predict_environment(history):
 
-def predict_environment(data):
-    global sequence_buffer
+    # -----------------------------
+    # BUILD NORMALIZED SEQUENCE
+    # -----------------------------
 
-    current = [
-        data['soilMoisture'],
-        data['temperature'],
-        data['humidity'],
-        data['lightIntensity']
-    ]
+    sequence = []
 
-    normalized = scaler.transform([current])[0]
+    for row in history:
 
-    sequence_buffer.append(normalized)
+        values = [
+            row['soilMoisture'],
+            row['temperature'],
+            row['humidity'],
+            row['lightIntensity']
+        ]
 
-    # Keep only latest 10
-    if len(sequence_buffer) > 10:
-        sequence_buffer.pop(0)
+        normalized = scaler.transform([values])[0]
 
-    # Not enough data yet
-    if len(sequence_buffer) < 10:
-        data['predicted_moisture'] = data['soilMoisture']
-        return data
+        sequence.append(normalized)
 
-    sequence = np.array([sequence_buffer])
+    # -----------------------------
+    # CONVERT TO LSTM INPUT SHAPE
+    # -----------------------------
+
+    sequence = np.array([sequence])
+
+    # Shape becomes:
+    # (1, sequence_length, 4)
+
+    # -----------------------------
+    # PREDICT FUTURE MOISTURE
+    # -----------------------------
 
     prediction = model.predict(sequence, verbose=0)
 
     predicted_moisture_normalized = prediction[0][0]
 
-    # Reverse normalization manually
+    # Reverse normalization
     predicted_moisture = predicted_moisture_normalized * 100
 
-    data['predicted_moisture'] = round(predicted_moisture, 2)
+    # -----------------------------
+    # RETURN CURRENT ROW
+    # WITH PREDICTION ADDED
+    # -----------------------------
 
-    return data
+    current_data = history[0]
+
+    current_data['predicted_moisture'] = round(predicted_moisture, 2)
+
+    print(current_data)
+
+    return current_data
