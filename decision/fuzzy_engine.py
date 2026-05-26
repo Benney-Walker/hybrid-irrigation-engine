@@ -7,7 +7,7 @@ def run_fuzzy(env):
 
     # Variables
     current_moisture = ctrl.Antecedent(np.arange(0, 101, 1), 'soilMoisture')
-    predicted_moisture = ctrl.Consequent(np.arange(0, 101, 1), 'predicted_moisture')
+    predicted_moisture = ctrl.Antecedent(np.arange(0, 101, 1), 'predicted_moisture')
     temp = ctrl.Antecedent(np.arange(0, 51, 1), 'temperature')
     humidity = ctrl.Antecedent(np.arange(0, 101, 1), 'humidity')
     light = ctrl.Antecedent(np.arange(0, 3000, 1), 'lightIntensity')
