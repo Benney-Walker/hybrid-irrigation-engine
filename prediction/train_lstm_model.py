@@ -22,20 +22,20 @@ sequence_length = 10
 x = []
 y = []
 
-sessions = df['experiment_id'].unique()
+experiments = df['experiment_id'].unique()
 
-for session in sessions:
+for experiment in experiments:
 
-    session_df = df[df['experiment_id'] == session]
+    experiment_df = df[df['experiment_id'] == experiment]
 
-    session_data = session_df[[
+    experiment_data = experiment_df[[
         'soil_moisture',
         'temperature',
         'humidity',
         'light_intensity'
     ]].values
 
-    scaled_session = scaler.transform(session_data)
+    scaled_session = scaler.transform(experiment_data)
 
     for i in range(sequence_length, len(scaled_session)):
         x.append(scaled_session[i - sequence_length:i])
@@ -80,7 +80,7 @@ model.fit(
     X,
     y,
     epochs=100,
-    batch_size=8,
+    batch_size=10,
     callbacks=[stopper]
 )
 
@@ -88,6 +88,6 @@ model.fit(
 # SAVE MODEL
 # -----------------------------
 
-model.save('../models/moisture_predictor_lstm_v1.keras')
+model.save('../models/moisture_predictor_lstm_v2.keras')
 
 print("\nLSTM model trained and saved successfully")
