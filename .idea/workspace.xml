@@ -49,6 +49,7 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.api.executor": "Run",
     "Python.formatter.executor": "Run",
     "Python.main.executor": "Run",
     "Python.train_lstm_model.executor": "Run",
@@ -68,7 +69,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="hybrid-irrigation-engine" />
       <option name="ENV_FILES" value="" />
@@ -151,7 +152,7 @@
       <workItem from="1778495973842" duration="33900000" />
       <workItem from="1779614577537" duration="1140000" />
       <workItem from="1779823262006" duration="5583000" />
-      <workItem from="1780314191894" duration="5369000" />
+      <workItem from="1780314191894" duration="5796000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -473,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780319984339</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added unicorn dependency">
+      <option name="closed" value="true" />
+      <created>1780320230317</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1780320230317</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,6 +519,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hybrid_irrigation_engine$train_lstm_model.coverage" NAME="train_lstm_model Coverage Results" MODIFIED="1778864081749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/prediction" />
     <SUITE FILE_PATH="coverage/hybrid_irrigation_engine$formatter.coverage" NAME="formatter Coverage Results" MODIFIED="1777717900220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Output" />
-    <SUITE FILE_PATH="coverage/hybrid_irrigation_engine$main.coverage" NAME="main Coverage Results" MODIFIED="1779826562640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hybrid_irrigation_engine$main.coverage" NAME="main Coverage Results" MODIFIED="1780320526465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hybrid_irrigation_engine$api.coverage" NAME="api Coverage Results" MODIFIED="1780320567604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
