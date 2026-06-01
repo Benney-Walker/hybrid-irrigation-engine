@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f617fe42-76de-4462-a6ae-f7a9f24d40eb" name="Changes" comment="project file">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="f617fe42-76de-4462-a6ae-f7a9f24d40eb" name="Changes" comment="Updated project files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +152,7 @@
       <workItem from="1778495973842" duration="33900000" />
       <workItem from="1779614577537" duration="1140000" />
       <workItem from="1779823262006" duration="5583000" />
-      <workItem from="1780314191894" duration="675000" />
+      <workItem from="1780314191894" duration="3067000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -420,15 +418,29 @@
       <option name="project" value="LOCAL" />
       <updated>1779827110503</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Package project in docker">
+      <option name="closed" value="true" />
+      <created>1780314890370</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1780314890370</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Updated project files">
+      <option name="closed" value="true" />
+      <created>1780315141303</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1780315141303</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added output formatter" />
-    <MESSAGE value="Updated main.py" />
     <MESSAGE value="Project file" />
     <MESSAGE value="Updated model output" />
     <MESSAGE value="Updated import names" />
@@ -452,7 +464,9 @@
     <MESSAGE value="Changed variable names to increase readability" />
     <MESSAGE value="Updated validator to check if expected variable keys exist and values are not null" />
     <MESSAGE value="project file" />
-    <option name="LAST_COMMIT_MESSAGE" value="project file" />
+    <MESSAGE value="Package project in docker" />
+    <MESSAGE value="Updated project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated project files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hybrid_irrigation_engine$train_lstm_model.coverage" NAME="train_lstm_model Coverage Results" MODIFIED="1778864081749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/prediction" />
