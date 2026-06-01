@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
+from auth.security import verify_api_key
 
 from input.validator import validate_input
 from prediction.predictor import predict_environment
@@ -9,7 +10,10 @@ app = FastAPI()
 
 
 @app.post("/predict")
-def predict(payload: list):
+def predict(
+        payload: list,
+        _=Depends(verify_api_key)
+):
 
     try:
 
@@ -35,3 +39,10 @@ def predict(payload: list):
         return {
             "error": str(e)
         }
+
+@app.get("/check-up")
+def check_up(_=Depends(verify_api_key)):
+
+    return {
+        "status": "ACTIVE"
+    }

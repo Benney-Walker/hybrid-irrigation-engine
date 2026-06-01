@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f617fe42-76de-4462-a6ae-f7a9f24d40eb" name="Changes" comment="Added unicorn dependency" />
+    <list default="true" id="f617fe42-76de-4462-a6ae-f7a9f24d40eb" name="Changes" comment="Added multipart dependency">
+      <change afterPath="$PROJECT_DIR$/auth/security.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Dockerfile" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -69,6 +73,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FINAL YEAR PROJECT\DEVELOPMENT\hybrid-irrigation-engine\auth" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="hybrid-irrigation-engine" />
@@ -152,7 +161,7 @@
       <workItem from="1778495973842" duration="33900000" />
       <workItem from="1779614577537" duration="1140000" />
       <workItem from="1779823262006" duration="5583000" />
-      <workItem from="1780314191894" duration="5796000" />
+      <workItem from="1780314191894" duration="7804000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit">
       <option name="closed" value="true" />
@@ -482,14 +491,21 @@
       <option name="project" value="LOCAL" />
       <updated>1780320230317</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added multipart dependency">
+      <option name="closed" value="true" />
+      <created>1780320847150</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1780320847151</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="not versioned" />
     <MESSAGE value="Trained lstm model" />
     <MESSAGE value="Updated predictor to use the trained model" />
     <MESSAGE value="Downgraded to python 3.10" />
@@ -514,7 +530,8 @@
     <MESSAGE value="Added gitignore file" />
     <MESSAGE value="Updated gitignore" />
     <MESSAGE value="Added unicorn dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added unicorn dependency" />
+    <MESSAGE value="Added multipart dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added multipart dependency" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hybrid_irrigation_engine$train_lstm_model.coverage" NAME="train_lstm_model Coverage Results" MODIFIED="1778864081749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/prediction" />
